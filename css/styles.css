@@ -270,47 +270,19 @@ button {
 
 /* #region Hero section */
 .hero-section {
-  width: 320px;
+  max-width: 320px;
   padding: 72px 0;
   margin: 0 auto;
-
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/Hero/hero-mobile-1x.jpg);
-  max-width: 320px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
-.container {
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero {
-  margin: 0 auto;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #fff;
-  max-width: 216px;
-  margin-bottom: 72px;
-}
-.hero {
-  font-size: 56px;
-  line-height: 1.07;
-  max-width: 496px;
-  margin-bottom: 36px;
-}
-
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
@@ -345,18 +317,12 @@ button {
         url(../images/Hero/hero-tablet-2x.jpg);
     }
   }
-
-  /* .hero {
-    font-size: 56px;
-    line-height: 1.07;
-    max-width: 496px;
-    margin-bottom: 36px;
-  } */
 }
 
-@media only screen and (min-width: 1158px) {
+@media screen and (min-width: 1158px) {
   .hero-section {
     max-width: 1440px;
+    background-color: #2e2f42;
     padding: 188px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -364,7 +330,6 @@ button {
       ),
       url(../images/Hero/hero-desktop-1x.jpg);
   }
-
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -377,39 +342,37 @@ button {
     }
   }
 }
-
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  height: 100%;
-}
-
 .hero {
-  color: #fff;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11;
-  max-width: 320px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
   text-align: center;
-  margin: 0 auto 72px;
+  color: #fff;
+  margin: 52px;
 }
 
 @media screen and (min-width: 768px) {
   .hero {
+    font-weight: 700;
     font-size: 56px;
-    line-height: 1.07;
-    max-width: 496px;
-    margin: 0 auto 36px;
+    line-height: 1.07143;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    margin: 136px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .hero {
-    margin: 0 auto 48px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07143;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    margin: 472px;
   }
 }
 
@@ -433,10 +396,13 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-button:hover,
+.hero-button:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #4d5ae5;
+}
 .hero-button:focus {
-  background-color: #404bbf;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #404bbf;
 }
 
 /* #endregion */
@@ -704,9 +670,6 @@ button {
 }
 
 .our-portfolio-list {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
   justify-content: center;
   align-items: center;
 }
@@ -717,6 +680,7 @@ button {
     flex-wrap: wrap;
     gap: 72px 24px;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -761,23 +725,18 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
-  z-index: 10;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.our-portfolio-item-wrapper:hover .overlay {
+.our-portfolio-item:hover .overlay {
   transform: translateY(0);
 }
 .our-portfolio-item-wrapper {
