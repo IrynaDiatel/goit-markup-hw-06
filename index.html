@@ -61,27 +61,9 @@
             </li>
           </ul>
         </address>
-
-        <button class="burger-btn" type="button" data-menu-open>
-          <svg class="burger-icon" width="24" height="24">
-            <use href="./images/icons.svg#icon-burger"></use>
-          </svg>
-        </button>
-      </div>
-      <!-- #endregion -->
-
-      <!--#region Mobile-menu-->
-      <div class="mobile-menu" data-menu>
-        <div class="container mobile-menu-container">
-          <button class="mobile-menu-close" data-menu-close>Close</button>
-          <nav class="mobile-menu-nav">Navigation</nav>
-          <address>Address</address>
-          <div>Soc link</div>
-        </div>
       </div>
     </header>
     <!-- #endregion -->
-
     <main>
       <!-- #region Hero section -->
       <section class="hero">
@@ -844,9 +826,9 @@
     </footer>
     <!-- #endregion -->
 
-    <!-- #region Modal -->
+    <!-- #region Modal Window-->
 
-    <div class="backdrop">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
         <button class="close-btn" type="button">
           <svg class="close-icon" width="8" height="8">
@@ -930,7 +912,107 @@
       </div>
     </div>
     <!-- #endregion -->
+    <button class="burger-btn" type="button" data-menu-open>
+      <svg class="burger-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-burger"></use>
+      </svg>
+    </button>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" data-mobile>
+      <button class="close-btn" type="button" data-mobile-close>
+        <svg class="close-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="nav-mob-menu">
+        <ul class="mob-menu-list">
+          <li>
+            <a class="mob-menu-link" href="./index.html"
+              ><span class="mob-link-color">Studio</span></a
+            >
+          </li>
+          <li>
+            <a class="mob-menu-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a class="mob-menu-link" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="address-mob-menu">
+        <ul class="mob-address-list">
+          <li>
+            <a class="mob-address-link tel-color" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li>
+            <a class="mob-address-link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </address>
+      <ul class="social-mob-menu">
+        <li class="svg-footer-item">
+          <a
+            class="social-link footer-link"
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Instagram"
+          >
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="svg-footer-item">
+          <a
+            class="social-link footer-link"
+            href="https://www.twitter.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Twitter"
+          >
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="svg-footer-item">
+          <a
+            class="social-link footer-link"
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Facebook"
+          >
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="svg-footer-item">
+          <a
+            class="social-link footer-link"
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Linkedin"
+          >
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- #endregion -->
+    <script src="./js/mobile.js"></script>
     <script src="./js/modal.js"></script>
-    <script src="./js/menu.js"></script>
   </body>
 </html>
